@@ -1,0 +1,56 @@
+@use "../utils/variables" as v;
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 28px 100px;
+
+    &__logo{
+        // font-size: 1.5rem;
+        // font-weight: 700;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+
+        a{
+            text-decoration: none;
+            color: v.$secondary-text;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+
+            &:hover{
+                color: v.$header-text-hover;
+            }
+        }
+    }
+    &__cta{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        // button{
+        //     padding: 0.5rem 1rem;
+        //     border: none;
+        //     border-radius: 5px;
+        //     background-color: v.$primary;
+        //     color: v.$foreground;
+        //     font-size: 1rem;
+        //     font-weight: 500;
+        //     cursor: pointer;
+        //     transition: all 0.3s ease;
+
+            &:hover{
+                background-color: v.$secondary;
+            }
+        // }
+    }
+}

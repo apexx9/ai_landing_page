@@ -1,0 +1,29 @@
+@use "../utils//variables" as v;
+
+.footer{
+    width: 1920px;
+    height: 69px;
+    padding: 0 200px;
+    &__upper{
+
+    }
+
+    &__lower{
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        color: v.$secondary-text;
+
+        &--nav{
+            display: flex;
+            gap: 20px;
+            a{
+                text-decoration: none;
+                transition: all 0.3s ease;
+                &:hover{
+                    color: v.$header-text-hover;
+                }
+            }
+        }
+    }
+}

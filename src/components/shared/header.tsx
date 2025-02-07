@@ -1,12 +1,16 @@
+'use client'
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import type { readOnlyHeaderLinks } from '@/Interfaces/components';
 
+import Logo from "../../../public/Logo.png";
 import Button from './button';
+import styles from "@/styles/components/_header.module.scss";
 
-
-const HeaderLinks : readOnlyHeaderLinks[] =[
+const HeaderLinks : readOnlyHeaderLinks[] = [
   {_id: 1,
     name:'Features',
     url: '/features'
@@ -25,38 +29,57 @@ const HeaderLinks : readOnlyHeaderLinks[] =[
   }
 ]
 
+
 const Header = ({}) => {
+
+
+const router = useRouter();
+
+const handleImageClick = () => {
+  router.push('/');
+  alert("you want to navigate to the home page");
+}
+
+
+
   return (
-    <div className='header'>
+    <div className={styles['header']}>
       {/* Logo */}
-      <div className='header__logo'>
-        
+      <div className={styles['header__logo']}>
+        <Image 
+        alt= "the company logo"
+        src={Logo}
+        width={268}
+        height={40.63}
+        onClick={handleImageClick}
+        />
       </div>
       {/* Nav Links */}
-      <nav className='header__nav'>
-        <ul>
+      <nav className={styles['header__nav']}>
         {HeaderLinks.map((link) => (
-          <li className='header__nav--item'>
-          <Link key={link._id} href={link.url}>{link.name}</Link>
-          </li>
+
+          <Link key={link._id} 
+          href={link.url}
+          className={styles['header__nav--item']}
+          >{link.name}</Link>
+
         ))}
-        </ul>
       </nav>
 
       {/* CTA */}
-      <div className='header__cta'>
+      <div className={styles['header__cta']}>
         <Button 
         variant = 'primary'
-        onClick = {}
-        className='header__cta--primary'
+        onClick = {() => alert(`you have clicked the primary button`)}
+        className = {styles['header__cta--primary']}
         >
           {"Sign In"}
           </Button>
 
         <Button 
         variant = 'secondary'
-        onClick = {}
-        className='header__cta--secondary'
+        onClick = {() => alert(`you have clicked the secondary button`)}
+        className = {styles['header__cta--secondary']}
         >
           {"Sign Up"}
           </Button>
