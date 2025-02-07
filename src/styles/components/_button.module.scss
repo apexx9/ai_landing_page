@@ -1,0 +1,24 @@
+@use "../utils/variables" as v;
+
+$height: 54px;
+$width: 138px;
+
+.button{
+    width: $width;
+    height: $height;
+    padding: auto{
+        inline: 40px;
+        block: 16px;
+    };
+    border: {
+        radius: 40px;
+        width: 2px;
+    };
+    background: transparent;
+    &__primary{
+        border: v.$foreground; 
+    }
+    &__secondary{
+        border: v.$secondary;
+    }
+}
