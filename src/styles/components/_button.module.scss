@@ -6,11 +6,18 @@ $width: 138px;
 .button {
   width: $width;
   height: $height;
-  padding: 16px 40px; // Corrected padding syntax
-  border: 1px solid transparent;
+  padding: 16px 40px;
   border-radius: 40px;
+  border: 1px solid transparent;
   background: transparent;
   cursor: pointer;
+  display: flex; // Add flexbox for better alignment
+  align-items: center; // Center content vertically
+  justify-content: center; // Center content horizontally
+
+  &__icon {
+    margin-right: 10px; // Add spacing between icon and text
+  }
 
   &__primary {
     border-color: v.$primary; 
@@ -18,6 +25,6 @@ $width: 138px;
 
   &__secondary {
     background: v.$secondary;
-    border-radius: 40px;
+    border-radius: 40px; 
   }
 }

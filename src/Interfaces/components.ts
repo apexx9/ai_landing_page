@@ -1,5 +1,8 @@
 /* Handles Components interfaces */
 
+import { FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+
 {/* Header Interface */}
 interface Header{
     _id: number;
@@ -15,14 +18,19 @@ interface ButtonProps{
     onClick?: () => void;
     children: React.ReactNode;
     className?: string;
+    icon?: IconProp;
 }
 
 {/* Footer Interface */}
-//Lower Footer
-interface LowerFooterLinks{
+//Upper Footer
+interface UpperFooterLinks{
     _id: number;
-    name: string;
-    url: string;
+    header: string;
+    links: Header[];
+};
+//Lower Footer
+interface LowerFooterLinks extends Header{
+    //nothing here since it takes the same properties as Header
 }
 
 
@@ -45,5 +53,6 @@ type makeReadOnly<T> = {
 export type readOnlyButtonProps = makeReadOnly<ButtonProps>;
 export type readOnlyHeaderLinks = makeReadOnly<Header>;
 export type readOnlyLowerFooterLinks = makeReadOnly<LowerFooterLinks>;
+export type readOnlyUpperFooterLinks = makeReadOnly<UpperFooterLinks>;
 
 /* normal */
