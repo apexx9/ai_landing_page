@@ -51,9 +51,12 @@
         height: 68px; 
         display: flex;
         justify-content: space-between;
-        &--primary,&--secondary{
+        &--primary, &--secondary{
             width: 245px;
             height: 68px;
+        }
+        &--secondary{
+            box-shadow: 0px 0px 4px #664DFF; 
         }
     }
   }

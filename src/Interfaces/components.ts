@@ -1,6 +1,5 @@
 /* Handles Components interfaces */
 
-import { FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 {/* Header Interface */}
