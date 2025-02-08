@@ -1,0 +1,12 @@
+
+
+//Gradient mixin
+@mixin linear-gradient($location, $first-color, $start, $second-color, $end, $ground: "background") {
+
+    @if $ground == "foreground" {
+        background-image: linear-gradient($location, $first-color $start, $second-color $end);
+    }
+    @else if $ground == "background" {
+        background: linear-gradient($location, $first-color $start, $second-color $end);
+    }
+}

@@ -1,0 +1,70 @@
+@use "../utils/variables" as v;
+@use "../utils/mixins" as m;
+
+.hero {
+  width: 1720px;
+  height: 1080px;
+  background: v.$secondary-radial; 
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  &__content {
+    margin-top: 110px;
+    width: 1064px;
+    height: 436px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &--header {
+      color: transparent;
+      @include m.linear-gradient(to right, rgb(98, 127, 255), 7%, rgb(134, 91, 255), 96%, "foreground"); 
+      background-clip: text;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem; 
+      font-size: 16px;
+      margin-bottom: 20px; // Add spacing between header and subheader
+      display: flex;
+      gap: 12px;
+    }
+
+    &--subheader {
+      color: transparent;
+      background-image: v.$primary-text;
+      background-clip: text;
+      font-size: 65px;
+      font-weight: bold; 
+      text-align: center;
+    }
+    &--description {
+      color: v.$secondary-text;
+      font-size: 25px;
+      text-align: center;
+      margin-top: 20px; // Add spacing between subheader and description
+    }
+    &--button{
+        width: 514px;
+        height: 68px; 
+        display: flex;
+        justify-content: space-between;
+        &--primary,&--secondary{
+            width: 245px;
+            height: 68px;
+        }
+    }
+  }
+
+  &__stars{
+    display: flex;
+    padding-inline: 35px;
+    justify-content: space-between;
+    z-index: -1;
+    width: 100%;
+    position: relative;
+    top: -20%;
+  }
+}

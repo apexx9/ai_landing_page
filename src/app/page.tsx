@@ -1,11 +1,12 @@
 import React from 'react';
+import Hero from '@/containers/hero';
 
 
 
 const Page = ({}) => {
   return (
-    <div className=''>
-      
+    <div className='page'>
+      <Hero />
     </div>
   )
 }

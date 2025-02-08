@@ -1,9 +1,12 @@
 @use "../utils/variables" as v;
+@import url('https://fonts.googleapis.com/css2?family=Liter&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 $height: 54px;
 $width: 138px;
 
 .button {
+  font-family: "Liter", serif;
+  font-size: 15px;
   width: $width;
   height: $height;
   padding: 16px 40px;
