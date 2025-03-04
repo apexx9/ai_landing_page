@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "arduino_sim_module",
+			"path": "../../../../Documents/PlatformIO/Projects/arduino_sim_module"
+		}
+	],
+	"settings": {}
+}

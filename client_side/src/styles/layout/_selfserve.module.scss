@@ -1,0 +1,75 @@
+@use "../utils/variables" as v;
+
+.self_serve{
+  display: flex;
+  width: 1520px;
+  height: 610px;
+  justify-self: center;
+  background-color: v.$background;
+  border: 30px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+  border-block: 2px solid blue;
+  border-inline: none;
+  border-radius: 20px;
+
+
+  &--info{
+    width: 745px;
+    height: 322px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__title{
+      &__header{
+        color: transparent;
+        background-image: v.$primary-text;
+        background-clip: text;
+      }
+    }
+
+    &__description{
+        font-size: 26px;
+        color: v.$secondary-text;
+    }
+
+    &__rule{
+      color: v.$secondary-text;
+      height: 0; 
+      border: 0; 
+      border-top: 1px solid #083972; 
+    }
+
+    &__profile{
+      display: flex;
+
+      &__image{
+        
+      }
+
+      &__name{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__p1{
+          color: v.$foreground;
+          font-size: 29px;
+          letter-spacing: 2.9px;
+          text-transform: uppercase;
+        }
+        &__p2{
+          font-size: 12px;
+          color: v.$secondary-text;
+        }
+      }
+    }
+  }
+
+  &__image{
+    
+  }
+
+}

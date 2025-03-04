@@ -1,0 +1,112 @@
+@use "../utils/variables" as v;
+
+.trusted{
+    width: 1528px;
+    height: 2438px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+
+
+    &--upper{
+        width: 1521px;
+        height: 871px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        &__title{
+            width: 1521px;
+            height: 426px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            &__header{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;    
+                text-align: center;
+                color: transparent;
+                background-image: v.$primary-text;
+                background-clip: text;
+            }
+            &__logos{
+                    display: grid;
+                    border: 1px solid v.$secondary-text;
+                    background: v.$secondary-text;
+                    gap: 1px;
+                    align-self: center;
+                    justify-self: center;
+                    grid-template-columns: repeat(6, 1fr);
+                    grid-template-rows: 1fr 1fr;
+                    justify-content: center;
+                    justify-items: center;
+                    overflow-x: hidden;
+                    width: 1521px;
+                    height: 281px;
+                    margin: 0 20px;
+                &__logo{
+                    background: #010314;
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    justify-content: center;
+                    align-items: center;
+
+                    &__item{
+                        width: 20%;
+                        height: 40%;
+                        color: v.$secondary-text;
+                    }
+                }
+            }
+        }
+
+        &__cta{
+            width: 746px;
+            height: 265px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            &__header{
+                color: transparent;
+                background-image: v.$primary-text;
+                background-clip: text;
+            }
+            &__paragraph{
+                font-size: 20px;
+                color: v.$secondary-text;
+                text-align: center;
+            }
+            &__button{
+                display: flex;
+                width: 514px;
+                height: 68px; 
+                display: flex;
+                justify-content: space-between;
+
+                &__primary, &__secondary{
+                    width: 245px;
+                    height: 68px;
+                }
+                &__secondary{
+                    box-shadow: 0px 0px 4px #664DFF; 
+                }
+                }
+        }
+    }
+    &__lower{
+        width: 1520px;
+        height: 1487px;
+     
+        &__marketcup{
+            height: 645px;
+        }
+    }
+}
