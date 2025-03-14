@@ -26,6 +26,10 @@ const HeaderLinks : readOnlyHeaderLinks[] = [
   {_id: 4,
     name:'Affiliates',
     url:'/affiliates'
+  },
+  {_id: 4,
+    name:'Blog',
+    url:'/blog'
   }
 ]
 
